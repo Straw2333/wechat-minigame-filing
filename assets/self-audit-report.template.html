@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>《{{GAME_NAME}}》游戏自审自查报告</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 25mm 20mm 25mm 20mm;
+    }
+    body {
+      font-family: "SimSun", "Songti SC", "STSong", "Songti", serif;
+      color: #000;
+      line-height: 1.8;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 60px 70px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+      font-family: "SimHei", "STHeiti", sans-serif;
+    }
+    .meta-box {
+      border: 1px solid #333;
+      padding: 12px 18px;
+      margin-bottom: 25px;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+    .meta-row {
+      display: flex;
+      margin-bottom: 4px;
+    }
+    .meta-row:last-child {
+      margin-bottom: 0;
+    }
+    .meta-label {
+      font-weight: bold;
+      width: 120px;
+      flex-shrink: 0;
+    }
+    .meta-value {
+      flex: 1;
+    }
+    p {
+      text-indent: 2em;
+      margin: 12px 0;
+      font-size: 15px;
+      text-align: justify;
+    }
+    ol {
+      margin: 12px 0;
+      padding-left: 2.5em;
+      font-size: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+    .conclusion {
+      margin-top: 25px;
+      font-weight: bold;
+    }
+    .sign-section {
+      margin-top: 60px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .sign-box {
+      width: 320px;
+      font-size: 15px;
+      line-height: 2.2;
+    }
+    .sign-line {
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      width: 180px;
+      height: 24px;
+      vertical-align: bottom;
+    }
+    .fingerprint-hint {
+      font-size: 12px;
+      color: #666;
+      margin-left: 5px;
+    }
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-container">
+  <h1>《{{GAME_NAME}}》游戏自审自查报告</h1>
+
+  <div class="meta-box">
+    <div class="meta-row">
+      <div class="meta-label">游戏名称：</div>
+      <div class="meta-value">{{GAME_NAME}}</div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-label">申报 AppID：</div>
+      <div class="meta-value">{{APPID}}</div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-label">申报版本：</div>
+      <div class="meta-value">{{VERSION}}</div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-label">运营模式：</div>
+      <div class="meta-value">{{MONETIZATION_MODE}}</div>
+    </div>
+    <div class="meta-row">
+      <div class="meta-label">游戏类型：</div>
+      <div class="meta-value">{{GAME_CATEGORY}}</div>
+    </div>
+  </div>
+
+  <p>
+    {{SUBJECT_NAME}}系微信小游戏《{{GAME_NAME}}》（AppID: {{APPID}}）的研发与运营主体。
+  </p>
+  <p>
+    根据《中华人民共和国网络安全法》、《互联网信息服务管理办法》、《网络文化经营单位内容自审管理办法》、《关于加强网络游戏虚拟货币管理工作的通知》等相关国家法律法规、政策规定以及《微信小程序平台运营规范》，本单位/本人组织专人对该小游戏的全量代码、文字对白、美术素材、背景音乐、玩法机制等进行了严格、细致的上线前合规自审自查。
+  </p>
+
+  <p style="font-weight: bold; text-indent: 0;">一、 核心内容自审对照情况：</p>
+  <ol>
+    <li><strong>思想导向与政治安全</strong>：{{THEME_SUMMARY}}。绝不含有反对宪法确定基本原则、危害国家统一、主权和领土完整、泄露国家秘密、损害国家荣誉利益的内容；</li>
+    <li><strong>社会公序良俗</strong>：游戏绝无煽动民族仇恨、民族歧视、破坏民族团结的内容；绝无宣扬邪教、封建迷信、散布谣言扰乱社会秩序的内容；</li>
+    <li><strong>道德风尚与健康准则</strong>：全剧本与界面美术绝无淫秽、色情、暴力、血腥、赌博或者教唆犯罪等低俗违法内容；无侮辱、诽谤他人或侵犯他人合法权益之表述；</li>
+    <li><strong>商业模式与消费透明</strong>：{{MONETIZATION_CLAUSE}}；</li>
+    <li><strong>未成年人保护与防沉迷</strong>：游戏节奏平缓健康，严格遵循微信小游戏平台未成年人健康指引，无易导致沉迷的赌博性质设计；</li>
+    <li><strong>自主版权与知识产权</strong>：本游戏全部程序代码与核心资产均为自主独立研发创作（或已取得合法授权），不存在抄袭或侵犯第三方知识产权的情形。</li>
+  </ol>
+
+  <p class="conclusion">
+    二、 自审自查结论：
+  </p>
+  <p>
+    综上所述，经全面自审自查，微信小游戏《{{GAME_NAME}}》内容积极健康、立意向上，整体运行稳定规范，完全符合国家相关法律法规要求及微信小游戏上线运营资质标准。
+  </p>
+  <p>
+    特此报告！
+  </p>
+
+  <div class="sign-section">
+    <div class="sign-box">
+      <div>申报主体（签字/盖章）：<span class="sign-line"></span><span class="fingerprint-hint">（个人请签名并按手印）</span></div>
+      <div>负责人身份证号：<span class="sign-line"></span></div>
+      <div>自审日期：{{YEAR}} 年 &nbsp;&nbsp;&nbsp;&nbsp; 月 &nbsp;&nbsp;&nbsp;&nbsp; 日</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
